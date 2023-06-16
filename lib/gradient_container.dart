@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:roll_dice_app/styled_text.dart';
+import 'package:roll_dice_app/dice_roller.dart';
 
 // final: the value cannot be changed after assignment.
 //
@@ -35,9 +35,13 @@ class GradientContainer extends StatelessWidget {
             begin: startAlignment,
             end: endAlignment),
       ),
-      child: const Center(
-        child: StyledText('Hi there World!!!'),
-      ),
+      child: const Center(child: DiceRoller()),
     );
   }
 }
+
+// function in place (anonymous function): () {}
+// Column puts widgets on top of each other; Row next to each other
+//TextButton(onPressed: rollDice, child: const Text('Roll Dice')),
+//OutlinedButton(onPressed: () {}, child: const Text('Roll Dice'))
+//StyledText('Hi there World!!!'),
